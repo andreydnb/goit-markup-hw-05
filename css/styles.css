@@ -10,6 +10,9 @@
   --btn-hover-color: #188ce8;
   --adress-link-color: rgba(255, 255, 255, 0.6);
   --aboutus-background-color: #f5f4fa;
+  --alt-background-color:  #C4C4C4;
+  --overlay-hero-bg-color: rgba(47, 48, 58, 0.4);
+  --main-icon-color:#AFB1B8;
 }
 
 h1,
@@ -91,6 +94,10 @@ body {
   line-height: 1.17;
   text-align: center;
 }
+.social-list-icon {
+  width: 20px;
+  height: 20px;
+}
 /* ============= HEADER ============= */
 .header-container {
   display: flex;
@@ -151,13 +158,19 @@ body {
   background-color: var(--footer-background-color);
   padding-top: 200px;
   padding-bottom: 200px;
-
+  background-color: var(--alt-background-color);
+  background-image: linear-gradient(
+      var( --overlay-hero-bg-color),
+      var( --overlay-hero-bg-color)
+    ), 
+    url(../images/hero/bg.jpg);
+  background-size: cover;
 }  
-
 .hero-container {
   display: flex;
   flex-direction: column;
   align-items: center;
+  
 }
 .hero-title {
   margin: 0 auto 30px;
@@ -258,8 +271,32 @@ body {
   line-height: 1.19;
   text-align: center;
   color: var(--secondary-text-color);
+  margin-bottom: 16px;
 }
-
+.social-list {
+  display: flex;
+  justify-content: space-between;
+}
+.social-list-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: transparent;
+}
+.social-list-link:hover,
+.social-list-link:focus {
+  background-color: var(--accent-color);
+}
+.social-list-icon {
+  fill: var(--main-icon-color);
+}
+.social-list-link:hover .social-list-icon,
+.social-list-link:focus .social-list-icon {
+  fill: var(--main-background-color);
+}
 /* =============FOOTER ============= */
 .footer {
   background-color: var(--footer-background-color);
@@ -299,6 +336,25 @@ body {
 .adress-menu-link:hover,
 .adress-menu-link:focus {
   color: var(--accent-color);
+}
+.footer-social-title {
+  font-weight: 500;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: var(--main-background-color);
+  margin-bottom: 20px;
+
+}
+.footer-container {
+  display: flex;
+
+}
+.footer-left-container {
+  margin-right: 70px;
+
+}
+.footer-right-container {
+  padding-top: 12px;
 }
 /* ============= HERO PORTFOLIO============= */
 
