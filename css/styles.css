@@ -125,6 +125,7 @@ body {
   display: flex;
   align-items: center;
 }
+
 .head-menu-item:not(:last-child) {
   margin-right: 50px;
 }
@@ -149,7 +150,8 @@ body {
 }
 .head-menu-link,
 .head-contact-link {
-  display: flex;
+  position: relative;
+  display: block;
   align-items: center;
   font-weight: 500;
   line-height: 1.14;
@@ -168,6 +170,16 @@ body {
 .tel {
   color: var(--secondary-text-color);
   fill: var(--secondary-text-color);
+}
+.current::after {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 100%;
+  height: 4px;
+  background-color: var(--accent-color);
+  margin-top: 30px;
+  border-radius: 2px;
 }
 /* ============= HERO ============= */
 .hero {
@@ -265,6 +277,23 @@ body {
   flex-basis: calc((100% - 90px) / 3);
   margin-left: 30px;
   margin-top: 30px;
+}
+.label-whatwedo {
+  position: relative;
+}
+.overlay-whatwedo {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  padding: 27px 82px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: var(--main-background-color);
+  background-color: rgba(47, 48, 58, 0.8);
 }
 /* =============ABOUT US ============= */
 .aboutus {
@@ -553,4 +582,8 @@ body {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
+}
+.close-btn-icon {
+  height: 11px;
+  width: 11px;
 }
