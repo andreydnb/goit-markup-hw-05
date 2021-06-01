@@ -182,12 +182,11 @@ body {
 }
 .current::after {
   position: absolute;
-  display: block;
   content: "";
   width: 100%;
   height: 4px;
   background-color: var(--accent-color);
-  margin-top: 30px;
+  margin-top: 79px;
   border-radius: 2px;
 }
 /* ============= HERO ============= */
